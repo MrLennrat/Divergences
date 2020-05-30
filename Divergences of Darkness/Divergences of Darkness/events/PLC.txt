@@ -10,6 +10,7 @@ country_event = {
 		name = "22240.A"
 		prestige = 20
 		badboy = 12
+		LIT = { all_core = { add_core = SCA} }
 		set_global_flag = big_lit
 	}
 
@@ -17,6 +18,14 @@ country_event = {
 		name = "22240.B"
 		prestige = 15
 		badboy = 8
+		365 = { add_core = THIS}
+		64 = { add_core = THIS}
+		363 = { add_core = THIS}
+		362 = { add_core = THIS}
+		361 = { add_core = THIS}
+		360 = { add_core = THIS}
+		707 = { add_core = THIS}
+		936 = { add_core = THIS}
 		set_global_flag = mid_lit
 	}
 
@@ -24,6 +33,12 @@ country_event = {
 		name = "22240.C"
 		prestige = 10
 		badboy = 5
+		365 = { add_core = THIS}
+		364 = { add_core = THIS}
+		363 = { add_core = THIS}
+		362 = { add_core = THIS}
+		361 = { add_core = THIS}
+		360 = { add_core = THIS}
 		set_global_flag = lite_lit
 	}
 }
@@ -148,10 +163,10 @@ country_event = {
 	
 	option = { 
 	name = "22250.A"
+	change_tag_no_core_switch = POL
 	release_vassal = UKR 
 	release_vassal = BLR 
-	release_vassal = LIT 
-	change_tag_no_core_switch = POL 
+	release_vassal = LIT  
 	prestige_factor = -0.5
 	any_pop = {
 		militancy = 3 
