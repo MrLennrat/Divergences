@@ -1,3 +1,3 @@
-name = "Divergences of DarknessF"
-path = "mod/Divergences of DarknessF"
-user_dir = "DoDF"
+name = "Divergences of Darkness"
+path = "mod/Divergences of Darkness"
+user_dir = "DoD"
