@@ -1,0 +1,110 @@
+country_event = {
+	id = 50000
+	title = "50000.T"
+	desc = "50000.D"
+	picture = "Scandinavian_Karelia"
+	
+	trigger = {
+		tag = SCA
+		983 = {owned_by = RUS}
+		NOT {has_global_flag = sca_karelia}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "50000.A"
+		set_global_flag = sca_karelia
+		set_country_flag = karelia_claimed
+		badboy = 5.5
+		relation = {
+			who = RUS
+			value = -150
+		}
+		casus_belli = {
+			target = RUS
+			type = acquire_state
+			months = 24
+		}
+		war = {
+			target = RUS
+			attacker_goal = {
+				casus_belli = acquire_state
+				state_province_id = 983
+			}
+			defender_goal = {
+				casus_belli = humiliate
+			}
+			call_ally = yes
+		}
+		
+	}
+	
+	option = {
+		name = "50000.B"
+		relation = {
+			who = RUS
+			value = 50
+		}
+		badboy = -1
+		prestige = -5
+		set_global_flag = sca_karelia
+	}
+}
+
+country_event = {
+	id = 50001
+	title = "50001.T"
+	desc = "50001.D"
+	picture = "Scandinavian_Karelia"
+	
+	trigger = {
+		tag = SCA
+		983 = {owned_by = MUS}
+		NOT {has_global_flag = sca_karelia}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "50000.A"
+		set_global_flag = sca_karelia
+		set_country_flag = karelia_claimed
+		badboy = 5.5
+		relation = {
+			who = MUS
+			value = -150
+		}
+		casus_belli = {
+			target = MUS
+			type = acquire_state
+			months = 24
+		}
+		war = {
+			target = MUS
+			attacker_goal = {
+						casus_belli = acquire_state
+						state_province_id = 983
+					}
+			defender_goal = {
+				casus_belli = humiliate
+			}
+		}
+		
+	}
+	
+	option = {
+		name = "50000.B"
+		relation = {
+			who = MUS
+			value = 50
+		}
+		badboy = -1
+		prestige = -5
+		set_global_flag = sca_karelia
+	}
+}
