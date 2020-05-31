@@ -3506,3 +3506,5 @@ HHR_torsmark_title;Claim Torsmark;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 HHR_torsmark_desc;Although sparsely populated, the Torsmark region is home to a significant Rhonnst population. We should establish firmer control of the area in hopes of deterring further western expansionism and exploitation of our kin.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 option_disable_DVG_badboy_title;Disable Divergences Infamy Reduction;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 option_disable_DVG_badboy_desc;Disables the -0,4 infamy modifier for Great Powers and the -0,2 infamy modifier for the rest of countries. Not thoroughly tested, use at your own risk.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+karelia_conquered_title;Integrate Karelia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+karelia_conquered_desc;After the fall of the Republic of Novgorod we successfully pressed our claim onto Karelia. It is time to properly integrate the state into Scandinavia!;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
