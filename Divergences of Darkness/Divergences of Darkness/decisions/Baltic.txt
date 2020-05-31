@@ -37,6 +37,30 @@ political_decisions = {
 			factor = 1
 		}
 	}
+	
+	karelia_conquered = {
+		potential = {
+			tag = SCA
+			has_country_flag = karelia_claimed
+			983 = {owned_by = SCA}
+			NOT = { has_country_flag = karelia_conquered }
+		}
+		
+		allow = {
+			is_greater_power = yes
+			nationalism_n_imperialism = 1
+			war = no
+		}
+		
+		effect = {
+			2587 = { add_core = SCA}
+			983 =  { add_core = SCA}
+			984 =  { add_core = SCA}
+			988 =  { add_core = SCA}
+			995 =  { add_core = SCA}
+			set_country_flag = karelia_conquered
+		}
+	}
 
 	lithuania_kidnapping = {
 		potential = {
