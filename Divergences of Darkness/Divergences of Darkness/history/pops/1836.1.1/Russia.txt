@@ -708,13 +708,13 @@
 	}
 
 	clergymen = {
-		culture = ugrian
+		culture = finnish
 		religion = orthodox
 		size = 10
 	}
 
 	farmers = {
-		culture = ugrian
+		culture = finnish
 		religion = orthodox
 		size = 290
 	}
@@ -747,26 +747,26 @@
 	}
 
 	clergymen = {
-		culture = ugrian
+		culture = finnish
 		religion = orthodox
 		size = 25
 	}
 
 	artisans = {
-		culture = ugrian
+		culture = finnish
 		religion = orthodox
 		size = 2150
 	}
 
 	soldiers = {
-		culture = ugrian
+		culture = finnish
 		religion = orthodox
 		size= 25
 
 	}
 
 	farmers = {
-		culture = ugrian
+		culture = finnish
 		religion = orthodox
 		size = 2800
 	}
@@ -799,26 +799,26 @@
 	}
 
 	clergymen = {
-		culture = ugrian
+		culture = finnish
 		religion = orthodox
 		size = 50
 	}
 
 	artisans = {
-		culture = ugrian
+		culture = finnish
 		religion = orthodox
 		size = 200
 	}
 
 	soldiers = {
-		culture = ugrian
+		culture = finnish
 		religion = orthodox
 		size= 25
 
 	}
 
 	farmers = {
-		culture = ugrian
+		culture = finnish
 		religion = orthodox
 		size = 3725
 	}
@@ -1616,26 +1616,26 @@
 	}
 
 	clergymen = {
-		culture = ugrian
+		culture = finnish
 		religion = orthodox
 		size = 50
 	}
 
 	artisans = {
-		culture = ugrian
+		culture = finnish
 		religion = orthodox
 		size = 350
 	}
 
 	soldiers = {
-		culture = ugrian
+		culture = finnish
 		religion = orthodox
 		size= 75
 
 	}
 
 	farmers = {
-		culture = ugrian
+		culture = finnish
 		religion = orthodox
 		size = 6525
 	}
