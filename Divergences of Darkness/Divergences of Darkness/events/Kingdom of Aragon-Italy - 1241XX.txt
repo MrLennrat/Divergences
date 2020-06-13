@@ -387,3 +387,367 @@ country_event = {
 		}
 	}	
 }
+country_event = {
+	id = 50010
+	title = "50010.T"
+	desc = "50010.D"
+	picture = "occitania_conqueredd"
+	
+	trigger = {
+		tag = ARI
+		OCC = { all_core = { owned_by = ARI }}
+		NOT {has_country_flag = occitania_conquered}
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+		name = "50010.A"
+		prestige = 15
+		set_country_flag = occitania_conquered
+	}
+}
+
+country_event = {
+	id = 50020
+	title = "50020.T"
+	desc = "50020.D"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ARI
+		835 = { owned_by = ARI}
+		839 = { owned_by = ARI}
+		833 = { owned_by = ARI}
+		845 = { owned_by = ARI}
+		MAC = exists
+		Mac = { in_sphere = ARI }
+		OR = {
+				MAC = { government = absolute_monarchy }
+				MAC = {	government = prussian_constitutionalism }
+				MAC = {	government = hms_government }
+			}
+		NOT { exists = GRE }
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+		name = "50020.A"
+		MAC = { country_event = 50021 }
+	}
+	
+	option = {
+		name = "50020.B"
+		badboy = 3
+		MAC = { country_event = 50022 }
+	}
+	
+	option = {
+		name = "50020.C"
+		badboy = 10
+	}	
+}
+
+country_event = {
+	id = 50021
+	title = "50021.T"
+	desc = "50021.D"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "50021.A"
+		ARI = {create_vassal = MAC}
+		ARI = {any_owned = {
+				limit = {is_core = GRE}
+				secede_province = MAC
+			}
+		}
+		GRE = { all_core = { add_core = MAC} }
+		GRE = { all_core = { remove_core = GRE} }
+		ARI = { country_event = 50023 }
+	}
+	
+	option = {
+		name = "50021.B"
+		ARI = { country_event = 50024 }
+	}
+	
+	option = {
+		name = "50021.C"
+		ai_chance = {
+			factor = 0.5
+		}
+		government = democracy
+		political_reform = wealth_weighted_voting
+    	political_reform = state_equal_weight
+    	political_reform = yes_meeting
+    	political_reform = free_press
+    	political_reform = state_controlled
+    	political_reform = gerrymandering
+		ARI = {diplomatic_influence = {who = MAC value = -400}}
+		ARI = { country_event = 50025 }
+	}
+}
+
+country_event = {
+	id = 50022
+	title = "50021.T"
+	desc = "50022.D"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "50021.A"
+		ARI = {create_vassal = MAC}
+		ARI = {any_owned = {
+				limit = {
+					AND {
+						is_core = GRE
+						NOT { is_core = CRE }
+						NOT { is_core = CYP }
+					}
+				}
+				secede_province = MAC
+				add_core = MAC
+			}
+		}
+			GRE = { all_core = { remove_core = GRE}}
+			ARI = { country_event = 50023 }
+	}
+	
+	option = {
+		name = "50021.B"
+		ARI = { country_event = 50024 }
+	}
+	
+	option = {
+		name = "50021.C"
+		ai_chance = {
+			factor = 0.5
+		}
+		government = democracy
+		political_reform = wealth_weighted_voting
+    	political_reform = state_equal_weight
+    	political_reform = yes_meeting
+    	political_reform = free_press
+    	political_reform = state_controlled
+    	political_reform = gerrymandering
+		ARI = {diplomatic_influence = {who = MAC value = -400}}
+		ARI = { country_event = 50025 }
+	}
+	
+	
+}
+
+country_event = {
+	id = 50023
+	title = "50023.T"
+	desc = "50023.D"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "50023.A"
+		prestige = 5
+	}
+}
+
+country_event = {
+	id = 50024
+	title = "50024.T"
+	desc = "50024.D"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "50024.A"
+		prestige = -5
+		badboy = 5
+	}
+	
+	option = {
+		name = "50024.B"
+		prestige = 5
+		badboy = 5
+		add_casus_belli = {
+			target = MAC
+			type = make_puppet
+			months = 3
+			}
+			
+		GRE = { all_core = { add_core = MAC}}
+		GRE = { all_core = { remove_core = GRE}}
+		
+		826 = { secede_province = MAC }
+		825 = { secede_province = MAC }
+		833 = { secede_province = MAC }
+		831 = { secede_province = MAC }
+		832 = { secede_province = MAC }
+		827 = { secede_province = MAC }
+		837 = { secede_province = MAC }
+		836 = { secede_province = MAC }
+		835 = { secede_province = MAC }
+		834 = { secede_province = MAC }
+		838 = { secede_province = MAC }
+		845 = { secede_province = MAC }
+		840 = { secede_province = MAC }
+		842 = { secede_province = MAC }
+		841 = { secede_province = MAC }
+		839 = { secede_province = MAC }
+			
+		war = {
+			target = MAC
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+		}	
+		
+			
+	}	
+}
+
+country_event = {
+	id = 50025
+	title = "50025.T"
+	desc = "50025.D"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name ="50025.A"
+		add_casus_belli = {
+			target = MAC
+			type = make_puppet
+			months = 3
+		}
+		ARI = {any_owned = {
+				limit = {is_core = GRE}
+				add_core = MAC
+			}
+		}
+		
+		GRE = { all_core = { remove_core = GRE}}
+		
+		826 = { secede_province = MAC }
+		825 = { secede_province = MAC }
+		833 = { secede_province = MAC }
+		831 = { secede_province = MAC }
+		832 = { secede_province = MAC }
+		827 = { secede_province = MAC }
+		837 = { secede_province = MAC }
+		836 = { secede_province = MAC }
+		835 = { secede_province = MAC }
+		834 = { secede_province = MAC }
+		838 = { secede_province = MAC }
+		845 = { secede_province = MAC }
+		840 = { secede_province = MAC }
+		842 = { secede_province = MAC }
+		841 = { secede_province = MAC }
+		839 = { secede_province = MAC }
+		
+		war = {
+			target = MAC
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+		}	
+	}
+	
+	option = {
+		name ="50025.B"
+		prestige = -15
+		infamy = -3
+	}
+}
+
+country_event = { ##Status of Greece
+	id = 50030
+	title = "ETR24.T"
+	desc = "ETR24.D"
+	trigger = {
+	tag = ARI
+	MAC = { exists = no }
+	owns = 834 
+	NOT = { has_country_flag = greece_status } 	
+	NOT = { has_country_flag = greek_integration }
+	}
+	
+	mean_time_to_happen = { 
+	months = 25
+	}
+	
+	option = { 
+	name = "36754.A"
+	set_country_flag = greece_status
+	any_owned = { 
+	limit = {
+		province_id = 826 
+		}
+	remove_core = GRE 
+	add_core = ARI
+		}
+	any_owned = { 
+	limit = {
+		province_id = 827 
+		}
+	remove_core = GRE 
+	add_core = ARI
+		}
+	release_vassal = GRE 
+	GRE = { capital = 834 }
+	create_alliance = GRE 
+	}
+	
+	option = { 
+	name = "36754.B"
+	set_country_flag = greece_status
+	badboy = 3
+	any_owned = { 
+			limit = {
+		province_id = 826 
+		}
+	remove_core = GRE 
+	add_core = ARI
+		}
+	any_owned = { 
+	limit = {
+		province_id = 827 
+		}
+	remove_core = GRE 
+	add_core = ARI
+		}
+	any_owned = { 
+	limit = { is_core = CRE is_core = CYP }
+	remove_core = GRE
+	}
+	release_vassal = GRE 
+	GRE = { capital = 834 }
+	create_alliance = GRE 
+	}
+	
+	option = { 
+	name = "36754.C"
+	set_country_flag = greece_status
+	badboy = 10 
+	any_owned = { 
+	limit = {
+		province_id = 826 
+		}
+	remove_core = GRE 
+	add_core = ARI
+		}
+	any_owned = { 
+	limit = {
+		province_id = 827 
+		}
+	remove_core = GRE 
+	add_core = ARI
+		}
+	}
+}
+
