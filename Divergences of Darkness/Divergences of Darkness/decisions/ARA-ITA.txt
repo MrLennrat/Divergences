@@ -352,4 +352,70 @@ political_decisions = {
 	
 	
 	}
+	
+	claim_occitania = {
+		potential = {
+			tag = ARI
+			has_country_flag = latin_empire
+			PRV = { exists = no }
+			NOT = { has_country_flag = occitania_claimed }
+		}
+		
+		allow = {
+			all_core = { owned_by = THIS }
+			rank = 4
+			mass_politics = 1
+		}
+		
+		effect = {
+			set_country_flag = occitania_claimed
+			prestige = 5
+			OCC = { all_core = { add_core = ARI} }
+			
+			any_country = {
+				limit = {
+					tag = OCC 
+					in_sphere = THIS
+					NOT = {
+						tag = THIS
+					}
+				}
+				annex_to = THIS
+			}
+			
+			any_country = {
+				limit = {
+					any_owned_province = { is_core = THIS }
+				}
+				relation = {
+					who = THIS
+					value = -200
+				}
+			}
+		}
+	}
+	
+	integrate_occitania = {
+	
+		potential = {
+			tag = ARI
+			NOT = { has_country_flag = occitania_integrated}
+			has_country_flag = occitania_conquered
+		}
+		
+		allow = {
+			rank = 4
+			all_core = { owned_by = THIS }
+			year = 1910
+			OR = {
+				behaviorism = 1
+				year = 1920
+			}
+		}
+		
+		effect = {
+			add_accepted_culture = provencal
+			set_country_flag = occitania_integrated
+		}
+	}
 }
