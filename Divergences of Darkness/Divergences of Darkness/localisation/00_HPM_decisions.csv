@@ -3508,3 +3508,7 @@ option_disable_DVG_badboy_title;Disable Divergences Infamy Reduction;;;;;;;;;;;;
 option_disable_DVG_badboy_desc;Disables the -0,4 infamy modifier for Great Powers and the -0,2 infamy modifier for the rest of countries. Not thoroughly tested, use at your own risk.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 karelia_conquered_title;Integrate Karelia;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 karelia_conquered_desc;After the fall of the Republic of Novgorod we successfully pressed our claim onto Karelia. It is time to properly integrate the state into Scandinavia!;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+claim_occitania_title;Our Occitanian brothers;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+claim_occitania_desc;The Occitanians always have been our Latin cousins with Catalan and Occitan being both Occitano-Romance languages. With our claims in Provence and Languedoc enforced we can go further and liberate all the Occitanians!;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+integrate_occitania_title;Integrate the Occitans;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+integrate_occitania_desc;Throughout the years after the liberation of Occitania the region and their people have become an integral part of the Latin Empire. It is time to welcome them as full and proper citizens of our nation!;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
